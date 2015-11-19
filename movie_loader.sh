@@ -18,7 +18,7 @@
 FILEBOT_PATH="/usr/local/bin/filebot"
 LOAD_PATH="."
 SAVE_PATH="/shared/Videos/Movies"
-NAME_FORMAT="{n} ({y})"
+NAME_FORMAT=${SAVE_PATH}/"{genres[0]}/{n} ({y})"
 
 for i in ${LOAD_PATH}/*
 do
