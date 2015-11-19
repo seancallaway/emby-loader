@@ -28,5 +28,5 @@ NAME_FORMAT=${SAVE_PATH}/"{genres[0]}/{n} ({y})"
 
 for i in ${LOAD_PATH}/*
 do
-	sudo ${FILEBOT_PATH} --action move --output ${SAVE_PATH} -rename "${i}" --db TheMovieDB --format "${NAME_FORMAT}" -non-strict
+	${FILEBOT_PATH} --action move --output ${SAVE_PATH} -rename "${i}" --db TheMovieDB --format "${NAME_FORMAT}" -non-strict
 done

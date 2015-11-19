@@ -31,5 +31,5 @@ cd ${LOAD_PATH}
 # Rename files
 for i in *
 do
-	sudo ${FILEBOT_PATH} -rename --action move "${i}" --db TheTVDB --format "${NAME_FORMAT}" -non-strict
+	${FILEBOT_PATH} -rename --action move "${i}" --db TheTVDB --format "${NAME_FORMAT}" -non-strict
 done
