@@ -1,18 +1,24 @@
 #!/bin/bash
-###################################
-# TV Show Loader Script for Emby
-# tv_loader.sh
+#############################################################################
+# tv_loader.sh - TV Show Loader Script for Emby
 #
-# Copyright 2015 by Sean Callaway.
-# See LICENSE for licensing terms.
+# Copyright 2015 by Sean Callaway <seancallaway@gmail.com>
+# 
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of version 2 of the GNU General Public License as 
+# published by the Free Software Foundation.
 #
-# Intended to be run as a root cron
-# job. If run as another user, 
-# ensure that the user has NOPASSWD 
-# Filebot requires root privileges 
-# to work properly.
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License at <http://www.gnu.org/licenses/> for
+# more details.
 #
-####################################
+# Intended to be run as a root cron job. If run as another user, ensure that 
+# the user has NOPASSWD in sudo. Filebot requires root privileges to work 
+# properly.
+#
+#############################################################################
 
 
 FILEBOT_PATH="/usr/local/bin/filebot"
