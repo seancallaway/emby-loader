@@ -18,22 +18,12 @@
 FILEBOT_PATH="/usr/local/bin/filebot"
 SAVE_PATH="/shared/Videos/TVShows"
 LOAD_PATH="."
-NAME_FORMAT="{n} {s00e00}" # Don't change me! Will break script!!!
+NAME_FORMAT=${SAVE_PATH}/"{n}{'/Season '+s}/{n} {s00e00}"
+
+cd ${LOAD_PATH}
 
 # Rename files
-for i in ${LOAD_PATH}/*
+for i in *
 do
-	sudo ${FILEBOT_PATH} -rename "${i}" --db TheTVDB --format "${NAME_FORMAT}" -non-strict
-done
-
-# Move files to folders based on show name
-for j in ${LOAD_PATH}/*
-do
-	SHOW=$(echo ${j} | sed -e 's/.\{11\}$//g')
-	if [ ! -d ${SAVE_PATH}/{SHOW} ]
-		# Directory doesn't exist. Create it.
-		mkdir ${SAVE_PATH}/${SHOW}
-	fi
-
-	mv ${j} ${SAVE_PATH}/${SHOW}/
+	sudo ${FILEBOT_PATH} -rename --action move "${i}" --db TheTVDB --format "${NAME_FORMAT}" -non-strict
 done
